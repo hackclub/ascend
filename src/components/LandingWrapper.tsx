@@ -5,14 +5,10 @@ export default function LandingWrapper({ show, children }:{ show: boolean, child
   const container: Variants = {
     hidden: {
       opacity: 0,
-      transition: {
-        once: true,
-      }
     },
     show: {
       opacity: 1,
       transition: {
-        once: true,
         delayChildren: 0.5,
         staggerChildren: 0.2,
         staggerDirection: 1,

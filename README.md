@@ -9,6 +9,24 @@ From November 15th-17th, 50 girls from 6 different countries gathered in Los Ang
 
 ![image](https://github.com/user-attachments/assets/4ab4298a-f51f-4eeb-bddc-63087c131a5b)
 
+## Website development
+
+Requires Node.js 22+ and Bun 1.4.5.
+
+```sh
+bun install --frozen-lockfile
+bun run dev
+```
+
+Run `bun run lint`, `bun run typecheck`, and `bun run build` before deploying.
+Deploy with `vc --prod --scope hackclub`. Vercel uses the committed Bun lockfile.
+
+Keep secrets in ignored `.env.local` files or Vercel environment variables.
+Never prefix an Airtable token with `NEXT_PUBLIC_` or use it in client components,
+public assets, or browser requests. This site currently has no Airtable integration;
+registration links to the externally hosted Hack Club form. Any future Airtable
+integration must use a server-only module or route and return only safe fields.
+
 ## Our Goals 🎯
 
 Similar to previous Athena Events such as Blossom, Evergreen, Celestial, and Luna, we had two goals as the basis of our planning. Specifically for this summit, however, we approached it with a third goal that came from how large-scale we wanted this event to be:
